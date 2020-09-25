@@ -1,0 +1,84 @@
+:host {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+  border-radius: 5px;
+  box-shadow: inset -1px -2px 1px rgba(0,0,0,0.7),
+  inset 1px 2px 1px rgba(255,255,255,0.3);
+}
+
+.marks {
+  position: absolute;
+  width: 86%;
+  height: 86%;
+  top: 7%;
+  left: 8%;
+  background:
+  repeating-linear-gradient(#fff, #fff 10%, #222 10%, #222 100%);
+  background-position: top;
+  background-size: 100% 1.97%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: repeating-linear-gradient(transparent, transparent 15%, #222 15%, #222 100%);;
+    background-position: top;
+    background-size: 100% 9.8%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: repeating-linear-gradient(transparent, transparent 15%, #222 15%, #222 100%);;
+    background-position: top;
+    background-size: 100% 9.8%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+  }
+}
+
+.hole {
+  position: absolute;
+  width: 12%;
+  height: 90%;
+  top: 5%;
+  left: 46%;
+  background: #000;
+}
+
+.slider {
+  --sliderWidth: calc(var(--height) * .97);
+  --sliderHeight: calc(var(--width) * .96);
+  appearance: none;
+  width: var(--sliderWidth);
+  height: var(--sliderHeight);
+  outline: none;
+  background: transparent;
+  transform-origin: center;
+  transform: rotate(90deg);
+  cursor: pointer;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 15%;
+    height: calc(var(--sliderHeight) * .9);
+    background: linear-gradient(90deg, rgba(85,85,85,1) 0%, rgba(85,85,85,1) 20%, rgba(17,17,17,1) 21%, rgba(17,17,17,1) 39%, rgba(85,85,85,1) 40%, rgba(85,85,85,1) 48%, rgba(255,255,255,1) 50%, rgba(68,68,68,1) 52%, rgba(68,68,68,1) 60%, rgba(17,17,17,1) 61%, rgba(17,17,17,1) 79%, rgba(68,68,68,1) 80%, rgba(68,68,68,1) 100%);
+  }
+}
+
+.label {
+  position: absolute;
+  bottom: 1%;
+  text-align: center;
+  width: 100%;
+  font-size: 80%;
+}

@@ -1,0 +1,25 @@
+<section class="deck">
+  <div class="body"></div>
+  <div class="screen">
+    <div class="wave">
+      <div [id]="'waveform' + deckId" class="waveform"></div>
+      <div class="label">⬑ Drop file here to load in deck</div>
+    </div>
+  </div>
+  <div class="wheel">
+    <div class="side">A</div>
+  </div>
+  <mix-fader class="fader" (change)="setPitch($event)"></mix-fader>
+  <div class="cue" (click)="cue()">
+    <div class="text">CUE</div>
+  </div>
+  <div class="play" (click)="playPause()">
+    <div class="label">PLAY/PAUSE</div>
+    <div class="text"><i class="material-icons">play_arrow</i> <i class="material-icons">pause</i></div>
+  </div>
+  <div class="brand"></div>
+  <div class="model">
+    <div class="sup">WEB PLAYER</div>
+    <div>WDJ-2000X</div>
+  </div>
+</section>
