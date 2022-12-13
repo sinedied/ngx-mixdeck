@@ -7,7 +7,7 @@
   background: #222;
   border-radius: 5px;
   box-shadow: inset -1px -2px 1px rgba(0,0,0,0.7),
-  inset 1px 2px 1px rgba(255,255,255,0.3);
+    inset 1px 2px 1px rgba(255,255,255,0.3);
 }
 
 .marks {
@@ -15,7 +15,7 @@
   width: 86%;
   height: 86%;
   top: 7%;
-  left: 8%;
+  left: 7%;
   background:
   repeating-linear-gradient(#fff, #fff 10%, #222 10%, #222 100%);
   background-position: top;
@@ -51,8 +51,10 @@
   width: 12%;
   height: 90%;
   top: 5%;
-  left: 46%;
+  left: 44%;
   background: #000;
+  box-shadow: inset -1px -1px 1px rgba(0,0,0,0.7),
+  inset 1px 1px 1px rgba(255,255,255,0.3);
 }
 
 .slider {
@@ -71,7 +73,27 @@
     appearance: none;
     width: 15%;
     height: calc(var(--sliderHeight) * .9);
-    background: linear-gradient(90deg, rgba(85,85,85,1) 0%, rgba(85,85,85,1) 20%, rgba(17,17,17,1) 21%, rgba(17,17,17,1) 39%, rgba(85,85,85,1) 40%, rgba(85,85,85,1) 48%, rgba(255,255,255,1) 50%, rgba(68,68,68,1) 52%, rgba(68,68,68,1) 60%, rgba(17,17,17,1) 61%, rgba(17,17,17,1) 79%, rgba(68,68,68,1) 80%, rgba(68,68,68,1) 100%);
+    background: linear-gradient(
+      90deg, 
+      #555 0%, 
+      #555 13%,
+      #333 22%, 
+      #222 36%, 
+      #555 36%, 
+      #555 48%, 
+      #fff 48%, 
+      #fff 52%, 
+      #444 52%, 
+      #444 63%, 
+      #111 63%, 
+      #333 77%, 
+      #444 87%, 
+      #444 100%
+    );
+    box-shadow: inset 1px 0 1px rgba(0,0,0,.7), 
+      inset -1px 0 1px rgba(0,0,0,.7);
+    border: 1px solid rgba(0,0,0,0.7);
+    border-radius: 4px;
   }
 }
 
